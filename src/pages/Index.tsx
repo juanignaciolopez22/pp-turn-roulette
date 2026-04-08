@@ -21,8 +21,7 @@ const teamMembers = [
 ];
 
 // 🔧 EDITABLE: Cambia la imagen central de Juanito aquí
-const juanito_center_image = "https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXvefgNoy1pL9w7cSkRvBj9xx%2FcEcjqMyWJppZOV1oKToA32c96dkeibcOo%2BpWy7gb8KjqGW2l%2FMoCfPPyx414lTWJR1HawuwSG0wknt9%2BInEmLnMf6NZP7ViVVV83tjjkmgD7EwgGiYeuiUUcXnrvNO4cNgzaW0YqLn8Ez2tY8F1qLlrIKSyuV2PAiwOr7hmz3AVR4mNjIdRM0ChaYqJ4l%2FSQAJTepvBXDU2jFCXt9L%2BBZH4tHoG7DIBoVF9h5leRgNlQLGu5596gzLVE17CZ9jHIqkdct70iA0%2Ba%2FPA5glALDOYKLELiOGZaJsOwyigihFoW0BrCT0CFJUqDkE7R3ZMpn8Fkh30C3ORiyhorEiiY3LN8yknfQx%2BUEpoKQZPhdYOO6fGSKC17ZvRx3u0y6i3a2cZNUwCxNlMCo6DH8U14B8DJ1qS0%2FmNdlYPj4isw2qhz%2B%2FER%2FuUPh1zDl4gX4DbyH5LhsENTlUcZnlIwjfxVgz1dHirme1kKjsHRIJ5RGY0G58zemIVsnomk324HzlcA5YmVuHgFO8f70kRrHzsh9veWgg5%2FLdkRyTWYXImm5s7NxzgLhwfieKaX5bkY%3D&allow_caching=true&sz=w1029-h1266-rw&auditContext=forDisplay";
-
+const juanito_center_image = "/juani.png";
 // ============================================================
 
 const useTickSound = () => {
