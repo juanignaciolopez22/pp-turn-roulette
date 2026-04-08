@@ -141,11 +141,12 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
         <div className="w-[90px] h-[90px] rounded-full bg-background border-[3px] border-neon animate-pulse-neon flex items-center justify-center overflow-hidden">
           <div className="flex flex-col items-center justify-center">
             {/* Placeholder avatar silhouette */}
-            <svg width="40" height="40" viewBox="0 0 40 40" className="opacity-60">
-              <circle cx="20" cy="14" r="8" fill="hsl(160, 100%, 50%, 0.4)" />
-              <ellipse cx="20" cy="34" rx="14" ry="10" fill="hsl(160, 100%, 50%, 0.3)" />
-            </svg>
-            <span className="text-[8px] text-neon/70 font-bold mt-[-4px] tracking-tight">CARA DE JUANITO</span>
+            <img 
+      src={juanitoCenterImage} 
+      alt="Juanito" 
+      className="w-full h-full object-cover"
+      onError={(e) => (e.currentTarget.style.display = 'none')} 
+    />
           </div>
         </div>
       </div>
