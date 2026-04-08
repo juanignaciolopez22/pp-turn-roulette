@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 // 🔧 EDITABLE: Cambia los nombres y fotos de tu equipo aquí
 // ============================================================
 const teamMembers = [
-  { name: "Juani", avatar: "https://drive.google.com/uc?export=view&id=1RtiWp0QVu3dM4LZC7TtX7Yc0u0oKEO6T" },
+  { name: "Juani", avatar: "juani.png" },
   { name: "Lauti", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjWH1H7v3jgXMhUmQLY8nff5VlOeCwKrKp3L7x6JhzjwrUhVNjSF=s265-p-k-rw-no" },
   { name: "Jefa", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjW1TDS7ATlIapLrqUQ0ZMxiP9eGNB4iCvG1_YfGUUFQN9X-58I=s265-p-k-rw-no" },
   { name: "Mati", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjX7XJeRroEtcrGj6_UwEbFwmam0rabam9w0VqJm22QhCso8OnI=s265-p-k-rw-no" },
