@@ -8,14 +8,16 @@ import { Button } from "@/components/ui/button";
 // 🔧 EDITABLE: Cambia los nombres y fotos de tu equipo aquí
 // ============================================================
 const teamMembers = [
-  { name: "Carlos M.", avatar: "placeholder_avatar.jpg" },
-  { name: "Ana García", avatar: "placeholder_avatar.jpg" },
-  { name: "Luis Torres", avatar: "placeholder_avatar.jpg" },
-  { name: "María López", avatar: "placeholder_avatar.jpg" },
-  { name: "Pedro Ruiz", avatar: "placeholder_avatar.jpg" },
-  { name: "Sofía Díaz", avatar: "placeholder_avatar.jpg" },
-  { name: "Diego Morales", avatar: "placeholder_avatar.jpg" },
-  { name: "Valentina Ríos", avatar: "placeholder_avatar.jpg" },
+  { name: "Juani", avatar: "placeholder_avatar.jpg" },
+  { name: "Lauti", avatar: "placeholder_avatar.jpg" },
+  { name: "Jefa Mili", avatar: "placeholder_avatar.jpg" },
+  { name: "Mati", avatar: "placeholder_avatar.jpg" },
+  { name: "Mau", avatar: "placeholder_avatar.jpg" },
+  { name: "Alva", avatar: "placeholder_avatar.jpg" },
+  { name: "Agus", avatar: "placeholder_avatar.jpg" },
+  { name: "Juanito", avatar: "placeholder_avatar.jpg" },
+  { name: "Nati", avatar: "placeholder_avatar.jpg" },
+  { name: "Gus", avatar: "placeholder_avatar.jpg" }
 ];
 
 // 🔧 EDITABLE: Cambia la imagen central de Juanito aquí
