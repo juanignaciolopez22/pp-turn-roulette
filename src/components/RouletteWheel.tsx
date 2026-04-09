@@ -10,7 +10,7 @@ interface RouletteWheelProps {
   rotation: number;
   isSpinning: boolean;
   juanitoCenterImage: string;
-  onWinner?: (winner: TeamMember) => void; // nueva prop
+  onWinner?: (winner: TeamMember) => void; // callback al padre
 }
 
 const SEGMENT_COLORS = [
@@ -24,7 +24,13 @@ const SEGMENT_COLORS = [
   "hsl(215, 70%, 22%)",
 ];
 
-const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage, onWinner }: RouletteWheelProps) => {
+const RouletteWheel = ({
+  members,
+  rotation,
+  isSpinning,
+  juanitoCenterImage,
+  onWinner,
+}: RouletteWheelProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const size = 420;
   const center = size / 2;
@@ -154,9 +160,9 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage, onWi
       {/* Centro Juanito */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
         <div className="w-[90px] h-[90px] rounded-full bg-background border-[3px] border-neon animate-pulse-neon flex items-center justify-center overflow-hidden">
-          <img 
-            src={juanitoCenterImage} 
-            alt="Juanito" 
+          <img
+            src={juanitoCenterImage}
+            alt="Juanito"
             className="w-full h-full object-cover"
           />
         </div>
