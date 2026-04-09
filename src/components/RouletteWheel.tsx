@@ -118,9 +118,12 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
 
     // --- Detectar ganador Agus ---
     if (!isSpinning) {
-      const winnerIndex = Math.floor(((rotation % 360) / 360) * members.length);
+      const segAngleDeg = 360 / members.length;
+      // Ajuste para que la flecha de arriba coincida con el cálculo
+      const adjustedRotation = (rotation + segAngleDeg / 2) % 360;
+      const winnerIndex = Math.floor((adjustedRotation / 360) * members.length);
       const winner = members[winnerIndex];
-      if (winner?.name.toLowerCase() === "Agus") {
+      if (winner?.name.toLowerCase() === "agus") {
         setShowModal(true);
       }
     }
