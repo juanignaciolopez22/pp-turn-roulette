@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import confetti from "canvas-confetti";
 import RouletteWheel from "@/components/RouletteWheel";
 import FinanceIcons from "@/components/FinanceIcons";
