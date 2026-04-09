@@ -195,7 +195,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/optimista.png"
                         alt="Optimista"
-                        className="w-48 mx-auto mb-4"
+                        className="w-64 mx-auto mb-6"
                       />
                       <h2 className="text-xl font-bold mb-4 text-white">¡El optimista del gol!</h2>
                       <button
