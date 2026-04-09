@@ -5,6 +5,7 @@ interface TeamMember {
   avatar: string; // ruta a la imagen, ej: "/pp-turn-roulette/juani.png"
 }
 
+
 interface RouletteWheelProps {
   members: TeamMember[];
   rotation: number;
