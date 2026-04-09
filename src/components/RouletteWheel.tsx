@@ -120,7 +120,7 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
     if (!isSpinning) {
       const winnerIndex = Math.floor(((rotation % 360) / 360) * members.length);
       const winner = members[winnerIndex];
-      if (winner?.name.toLowerCase() === "agus") {
+      if (winner?.name.toLowerCase() === "Agus") {
         setShowModal(true);
       }
     }
