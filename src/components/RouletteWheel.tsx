@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 
 interface TeamMember {
   name: string;
-  avatar: string;
+  avatar: string; // ruta a la imagen, ej: "/pp-turn-roulette/juani.png"
 }
 
 interface RouletteWheelProps {
@@ -51,7 +51,7 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
       const startAngle = rotRad + i * segAngle;
       const endAngle = startAngle + segAngle;
 
-      // Draw segment
+      // Segmento
       ctx.beginPath();
       ctx.moveTo(center, center);
       ctx.arc(center, center, radius, startAngle, endAngle);
@@ -59,12 +59,12 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
       ctx.fillStyle = SEGMENT_COLORS[i % SEGMENT_COLORS.length];
       ctx.fill();
 
-      // Border
+      // Borde
       ctx.strokeStyle = "hsl(160, 100%, 50%, 0.3)";
       ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      // Text
+      // Texto
       ctx.save();
       ctx.translate(center, center);
       ctx.rotate(startAngle + segAngle / 2);
@@ -76,32 +76,35 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
       const textRadius = radius * 0.65;
       ctx.fillText(member.name, textRadius, 0);
 
-      // Avatar circle placeholder
+      // Avatar
       const avatarRadius = radius * 0.85;
-      ctx.beginPath();
-      ctx.arc(avatarRadius, 0, 14, 0, 2 * Math.PI);
-      ctx.fillStyle = "hsl(220, 25%, 20%)";
-      ctx.fill();
-      ctx.strokeStyle = "hsl(160, 100%, 50%, 0.5)";
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
+      const img = new Image();
+      img.src = member.avatar;
+      img.onload = () => {
+        ctx.save();
+        ctx.translate(center, center);
+        ctx.rotate(startAngle + segAngle / 2);
 
-      // Avatar initials
-      ctx.fillStyle = "hsl(160, 100%, 50%)";
-      ctx.font = "bold 10px Inter, sans-serif";
-      ctx.fillText(member.name.charAt(0), avatarRadius, 1);
+        ctx.beginPath();
+        ctx.arc(avatarRadius, 0, 14, 0, 2 * Math.PI);
+        ctx.clip();
+
+        ctx.drawImage(img, avatarRadius - 14, -14, 28, 28);
+
+        ctx.restore();
+      };
 
       ctx.restore();
     });
 
-    // Outer ring glow
+    // Glow externo
     ctx.beginPath();
     ctx.arc(center, center, radius, 0, 2 * Math.PI);
     ctx.strokeStyle = "hsl(160, 100%, 50%, 0.4)";
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    // Inner circle cutout for Juanito
+    // Círculo interno para Juanito
     ctx.beginPath();
     ctx.arc(center, center, 55, 0, 2 * Math.PI);
     ctx.fillStyle = "hsl(220, 25%, 10%)";
@@ -113,7 +116,7 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
 
   return (
     <div className="relative" style={{ width: size, height: size }}>
-      {/* Pointer arrow at top */}
+      {/* Flecha arriba */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 z-20">
         <div
           className="w-0 h-0"
@@ -126,7 +129,7 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
         />
       </div>
 
-      {/* Canvas (spins) */}
+      {/* Canvas */}
       <canvas
         ref={canvasRef}
         style={{
@@ -136,17 +139,14 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
         }}
       />
 
-      {/* Static Juanito center overlay */}
+      {/* Centro Juanito */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
         <div className="w-[90px] h-[90px] rounded-full bg-background border-[3px] border-neon animate-pulse-neon flex items-center justify-center overflow-hidden">
-          <div className="flex flex-col items-center justify-center">
-            {/* Placeholder avatar silhouette */}
-            <img 
-      src={juanitoCenterImage} 
-      alt="Juanito" 
-      className="w-full h-full object-cover"
-    />
-          </div>
+          <img 
+            src={juanitoCenterImage} 
+            alt="Juanito" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
