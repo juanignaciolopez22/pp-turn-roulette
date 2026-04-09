@@ -1,8 +1,8 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
 interface TeamMember {
   name: string;
-  avatar: string; // ruta a la imagen, ej: "/pp-turn-roulette/juani.png"
+  avatar: string;
 }
 
 interface RouletteWheelProps {
@@ -10,6 +10,7 @@ interface RouletteWheelProps {
   rotation: number;
   isSpinning: boolean;
   juanitoCenterImage: string;
+  onWinner?: (winner: TeamMember) => void; // nueva prop
 }
 
 const SEGMENT_COLORS = [
@@ -23,14 +24,11 @@ const SEGMENT_COLORS = [
   "hsl(215, 70%, 22%)",
 ];
 
-const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: RouletteWheelProps) => {
+const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage, onWinner }: RouletteWheelProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const size = 420;
   const center = size / 2;
   const radius = size / 2 - 10;
-
-  // Estado para el modal
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -116,18 +114,17 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    // --- Detectar ganador Agus ---
-    if (!isSpinning) {
+    // --- Avisar ganador al padre ---
+    if (!isSpinning && members.length > 0) {
       const segAngleDeg = 360 / members.length;
-      // Ajuste para que la flecha de arriba coincida con el cálculo
       const adjustedRotation = (rotation + segAngleDeg / 2) % 360;
       const winnerIndex = Math.floor((adjustedRotation / 360) * members.length);
       const winner = members[winnerIndex];
-      if (winner?.name.toLowerCase() === "agus") {
-        setShowModal(true);
+      if (winner && onWinner) {
+        onWinner(winner);
       }
     }
-  }, [members, rotation, isSpinning]);
+  }, [members, rotation, isSpinning, onWinner]);
 
   return (
     <div className="relative" style={{ width: size, height: size }}>
@@ -164,28 +161,6 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
           />
         </div>
       </div>
-
-      {/* Modal inline */}
-      {showModal && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-        >
-          <div className="bg-white p-6 rounded-lg text-center shadow-lg">
-            <img
-              src="/optimista.png" // pon tu imagen en public
-              alt="Optimista del gol"
-              className="w-48 mx-auto mb-4"
-            />
-            <h2 className="text-xl font-bold mb-4">¡El optimista del gol!</h2>
-            <button
-              onClick={() => setShowModal(false)}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
