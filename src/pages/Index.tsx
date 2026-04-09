@@ -168,7 +168,7 @@ const Index = () => {
               <>
                 <div className="animate-scale-in">
                   <RouletteWheel
-  members={members}
+  members={teamMembers}   // 👈 acá usá el nombre real de tu array
   rotation={rotation}
   isSpinning={isSpinning}
   juanitoCenterImage="/pp-turn-roulette/juanito.png"
@@ -179,6 +179,7 @@ const Index = () => {
     }
   }}
 />
+
 
                 </div>
 
