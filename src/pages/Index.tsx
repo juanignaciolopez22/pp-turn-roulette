@@ -59,6 +59,7 @@ const Index = () => {
   const [rotation, setRotation] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<(typeof teamMembers)[0] | null>(null);
+    const [showModal, setShowModal] = useState(false); // 👈 acá definís el estado
   const [allDone, setAllDone] = useState(false);
 
   const playTick = useTickSound();
