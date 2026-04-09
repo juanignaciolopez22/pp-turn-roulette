@@ -168,28 +168,45 @@ const Index = () => {
               <>
                 <div className="animate-scale-in">
                   <RouletteWheel
-  members={teamMembers}   // 👈 acá usá el nombre real de tu array
+  members={teamMembers}
   rotation={rotation}
   isSpinning={isSpinning}
   juanitoCenterImage="/pp-turn-roulette/juanito.png"
-  onWinner={(winner) => {
-    setWinner(winner);
-    if (winner.name.toLowerCase() === "agus") {
+  onWinner={(w) => {
+    setWinner(w);
+    if (w.name.toLowerCase() === "agus") {
       setShowModal(true);
     }
   }}
 />
 
+{/* Banner */}
+{winner && !isSpinning && (
+  <div className="glass-card rounded-xl px-8 py-5 text-center animate-scale-in neon-border">
+    <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">¡Bingo!</p>
+    <p className="text-2xl font-black text-primary neon-text">{winner.name}, te toca...</p>
+  </div>
+)}
 
-                </div>
-
-                {/* Winner banner */}
-                {winner && !isSpinning && (
-                  <div className="glass-card rounded-xl px-8 py-5 text-center animate-scale-in neon-border">
-                    <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">¡Bingo!</p>
-                    <p className="text-2xl font-black text-primary neon-text">{winner.name}, te toca...</p>
-                  </div>
-                )}
+{/* Modal */}
+{showModal && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white p-6 rounded-lg text-center shadow-lg">
+      <img
+        src="/optimista.png"
+        alt="Optimista del gol"
+        className="w-48 mx-auto mb-4"
+      />
+      <h2 className="text-xl font-bold mb-4">¡El optimista del gol!</h2>
+      <button
+        onClick={() => setShowModal(false)}
+        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+      >
+        Cerrar
+      </button>
+    </div>
+  </div>
+)}
 
                 {/* Buttons */}
                 <div className="flex flex-col items-center gap-3">
