@@ -168,11 +168,18 @@ const Index = () => {
               <>
                 <div className="animate-scale-in">
                   <RouletteWheel
-                    members={remaining}
-                    rotation={rotation}
-                    isSpinning={isSpinning}
-                    juanitoCenterImage={juanito_center_image}
-                  />
+  members={members}
+  rotation={rotation}
+  isSpinning={isSpinning}
+  juanitoCenterImage="/pp-turn-roulette/juanito.png"
+  onWinner={(winner) => {
+    setWinner(winner);
+    if (winner.name.toLowerCase() === "agus") {
+      setShowModal(true);
+    }
+  }}
+/>
+
                 </div>
 
                 {/* Winner banner */}
