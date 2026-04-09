@@ -145,6 +145,12 @@ const Index = () => {
     currentRotRef.current = 0;
   };
 
+  useEffect(() => {
+  if (winner?.name.toLowerCase() === "agus" && !isSpinning) {
+    setShowAgusModal(true);
+  }
+}, [winner, isSpinning]);
+  
   return (
     <div className="min-h-screen relative overflow-hidden">
       <FinanceIcons />
@@ -183,12 +189,11 @@ const Index = () => {
                   </div>
                 )}
                 
-                /* Modal especial para Agus */
-                {winner?.name.toLowerCase() === "agus" && !isSpinning && (
+                {winner?.name.toLowerCase() === "agus" && !isSpinning && showAgusModal && (
                   <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
                     <div className="bg-white p-6 rounded-lg text-center shadow-lg max-w-sm w-full">
                       <img
-                        src="/pp-turn-roulette/optimista.png"
+                        src="/optimista.png"
                         alt="Optimista"
                         className="w-48 mx-auto mb-4"
                       />
