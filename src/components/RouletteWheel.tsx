@@ -145,7 +145,6 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
       src={juanitoCenterImage} 
       alt="Juanito" 
       className="w-full h-full object-cover"
-      onError={(e) => (e.currentTarget.style.display = 'none')} 
     />
           </div>
         </div>
