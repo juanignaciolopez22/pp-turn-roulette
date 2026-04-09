@@ -193,7 +193,7 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
                     <div className="bg-white p-6 rounded-lg text-center shadow-lg max-w-sm w-full">
                       <img
-                        src="/optimista.png"
+                        src="/pp-turn-roulette/optimista.png"
                         alt="Optimista"
                         className="w-48 mx-auto mb-4"
                       />
