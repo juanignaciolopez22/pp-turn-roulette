@@ -154,10 +154,10 @@ const Index = () => {
         <div className="text-center mb-8 animate-fade-in">
           <h1 className="text-3xl md:text-4xl font-black tracking-tight">
             <span className="text-foreground">Ruleta de Turnos </span>
-            <span className="text-primary neon-text">Personales</span>
+            <span className="text-primary neon-text">Préstamos Personales</span>
           </h1>
           <p className="mt-3 text-lg text-muted-foreground">
-            ¡Bienvenido, <span className="text-primary font-bold neon-text">Juanito Preguntón</span>! Es hora de repartir el juego.
+            ¡Bienvenido, <span className="text-primary font-bold neon-text">Juanito Preguntón</span>! Es hora de repartir la daily.
           </p>
         </div>
 
@@ -178,8 +178,8 @@ const Index = () => {
                 {/* Winner banner */}
                 {winner && !isSpinning && (
                   <div className="glass-card rounded-xl px-8 py-5 text-center animate-scale-in neon-border">
-                    <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">¡Aprobado!</p>
-                    <p className="text-2xl font-black text-primary neon-text">{winner.name}, te toca hablar</p>
+                    <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">¡Bingo!</p>
+                    <p className="text-2xl font-black text-primary neon-text">{winner.name}, te toca...</p>
                   </div>
                 )}
 
@@ -192,7 +192,7 @@ const Index = () => {
                       size="lg"
                       className="text-lg px-10 py-6 font-bold bg-primary text-primary-foreground hover:bg-primary/90 neon-border transition-all duration-300 disabled:opacity-40"
                     >
-                      {isSpinning ? "Girando..." : "¡Juanito, hazla girar!"}
+                      {isSpinning ? "Girando..." : "¡Juanito, que gire!"}
                     </Button>
                   )}
 
@@ -213,10 +213,10 @@ const Index = () => {
               <div className="text-center animate-fade-in glass-card rounded-2xl p-12 neon-border max-w-lg">
                 <div className="text-6xl mb-4">🏆</div>
                 <h2 className="text-3xl font-black text-primary neon-text mb-3">
-                  ¡Cartera completa!
+                  ¡Daily completa!
                 </h2>
                 <p className="text-lg text-foreground/80 mb-6">
-                  Daily terminada. ¡A trabajar, equipo!
+                  Momento de la frase del día.
                 </p>
                 <Button
                   onClick={handleReset}
@@ -234,7 +234,7 @@ const Index = () => {
             <div className="w-full lg:w-72 glass-card rounded-xl p-5 animate-fade-in">
               <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4 flex items-center gap-2">
                 <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse-neon" />
-                Analistas que ya reportaron
+                Ya hablaron lo suficiente:
               </h3>
               <div className="space-y-2">
                 {done.map((member) => (
