@@ -189,24 +189,25 @@ const Index = () => {
                   </div>
                 )}
                 
-                {winner?.name.toLowerCase() === "agus" && !isSpinning && showAgusModal && (
+                {{winner?.name.toLowerCase() === "agus" && !isSpinning && showAgusModal && (
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                    <div className="bg-gray-900 p-6 rounded-lg text-center shadow-lg max-w-sm w-full border border-gray-700">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
                         src="/pp-turn-roulette/optimista.png"
                         alt="Optimista"
-                        className="w-64 mx-auto mb-6"
+                        className="w-80 mx-auto mb-8" // 👈 más grande (20rem)
                       />
-                      <h2 className="text-xl font-bold mb-4 text-white">¡El optimista del gol!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">¡El optimista del gol!</h2>
                       <button
                         onClick={() => setShowAgusModal(false)}
-                        className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
+                        className="px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700 transition text-lg"
                       >
                         Cancelar
                       </button>
                     </div>
                   </div>
                 )}
+
 
                 {/* Buttons */}
                 <div className="flex flex-col items-center gap-3">
