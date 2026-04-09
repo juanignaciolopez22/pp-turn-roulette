@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 interface TeamMember {
   name: string;
@@ -28,6 +28,9 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
   const size = 420;
   const center = size / 2;
   const radius = size / 2 - 10;
+
+  // Estado para el modal
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -112,7 +115,16 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
     ctx.strokeStyle = "hsl(160, 100%, 50%, 0.6)";
     ctx.lineWidth = 3;
     ctx.stroke();
-  }, [members, rotation]);
+
+    // --- Detectar ganador Agus ---
+    if (!isSpinning) {
+      const winnerIndex = Math.floor(((rotation % 360) / 360) * members.length);
+      const winner = members[winnerIndex];
+      if (winner?.name.toLowerCase() === "agus") {
+        setShowModal(true);
+      }
+    }
+  }, [members, rotation, isSpinning]);
 
   return (
     <div className="relative" style={{ width: size, height: size }}>
@@ -149,6 +161,28 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
           />
         </div>
       </div>
+
+      {/* Modal inline */}
+      {showModal && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+        >
+          <div className="bg-white p-6 rounded-lg text-center shadow-lg">
+            <img
+              src="/optimista.png" // pon tu imagen en public
+              alt="Optimista del gol"
+              className="w-48 mx-auto mb-4"
+            />
+            <h2 className="text-xl font-bold mb-4">¡El optimista del gol!</h2>
+            <button
+              onClick={() => setShowModal(false)}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
