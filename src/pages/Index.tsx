@@ -21,7 +21,7 @@ const teamMembers = [
 ];
 
 // 🔧 EDITABLE: Cambia la imagen central de Juanito aquí
-const juanito_center_image = "/juani.png";
+const juanito_center_image = "/pp-turn-roulette/juani.png";
 // ============================================================
 
 const useTickSound = () => {
