@@ -223,7 +223,7 @@ const Index = () => {
                       alt="Jefa"
                       className="w-80 mx-auto mb-8"
                     />
-                    <h2 className="text-3xl font-bold mb-6 text-white">¡La jefa manda!</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-white">Rápido que acecha!</h2>
                     <button
                       onClick={() => setShowJefaModal(false)}
                       className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
