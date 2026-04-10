@@ -60,9 +60,11 @@ const Index = () => {
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<(typeof teamMembers)[0] | null>(null);
   const [allDone, setAllDone] = useState(false);
+  
   const [showAgusModal, setShowAgusModal] = useState(false);
   const [showJefaModal, setShowJefaModal] = useState(false);
-
+  const [showMatiModal, setShowMatiModal] = useState(false);
+  
   const playTick = useTickSound();
   const animFrameRef = useRef<number>(0);
   const currentRotRef = useRef(0);
@@ -154,6 +156,9 @@ const Index = () => {
   if (winner?.name.toLowerCase() === "jefa" && !isSpinning) {
     setShowJefaModal(true);
   }
+  if (winner?.name.toLowerCase() === "mati" && !isSpinning) {
+    setShowMatiModal(true);
+  }
 }, [winner, isSpinning]);
   
   return (
@@ -226,6 +231,26 @@ const Index = () => {
                     <h2 className="text-3xl font-bold mb-6 text-white">Rápido que acecha!</h2>
                     <button
                       onClick={() => setShowJefaModal(false)}
+                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Modal para Mati padre */}
+              {winner?.name.toLowerCase() === "jefa" && !isSpinning && showMatiModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                    <img
+                      src="/pp-turn-roulette/mati.png"   
+                      alt="Jefa"
+                      className="w-80 mx-auto mb-8"
+                    />
+                    <h2 className="text-3xl font-bold mb-6 text-white">Mateo Lucca Mamani alert</h2>
+                    <button
+                      onClick={() => setShowMatiModal(false)}
                       className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
                     >
                       Cerrar
