@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 // ============================================================
 const teamMembers = [
   { name: "Juani", avatar: "/pp-turn-roulette/juani.png" },
-  { name: "Lauti", avatar: "/pp-turn-roulette/Gemini_Generated_Image_l52rgjl52rgjl52r.png" },
+  { name: "Lauti", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjWH1H7v3jgXMhUmQLY8nff5VlOeCwKrKp3L7x6JhzjwrUhVNjSF=s265-p-k-rw-no" },
   { name: "Jefa", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjW1TDS7ATlIapLrqUQ0ZMxiP9eGNB4iCvG1_YfGUUFQN9X-58I=s265-p-k-rw-no" },
   { name: "Mati", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjX7XJeRroEtcrGj6_UwEbFwmam0rabam9w0VqJm22QhCso8OnI=s265-p-k-rw-no" },
   { name: "Mau", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjXuEErr8q0fCTd7sHDIW0epdWy4hlMQq3BFfQ_-mrJ6KNW15L8=s265-p-k-rw-no" },
