@@ -65,6 +65,7 @@ const Index = () => {
   const [showJefaModal, setShowJefaModal] = useState(false);
   const [showMatiModal, setShowMatiModal] = useState(false);
   const [showLauModal, setShowLauModal] = useState(false);
+  const [showJuaniModal, setShowJuaniModal] = useState(false);
 
   const playTick = useTickSound();
   const animFrameRef = useRef<number>(0);
@@ -162,6 +163,9 @@ const Index = () => {
   }
   if (winner?.name.toLowerCase() === "lauti" && !isSpinning) {
     setShowLauModal(true);
+  }
+  if (winner?.name.toLowerCase() === "juani" && !isSpinning) {
+    setShowJuaniModal(true);
   }
 }, [winner, isSpinning]);
   
@@ -272,7 +276,7 @@ const Index = () => {
                       alt="draco"
                       className="w-80 mx-auto mb-8"
                     />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Todo al Negro Dragon furioso!</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-white">Todo al negro Dragon furioso!</h2>
                     <button
                       onClick={() => setShowLauModal(false)}
                       className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -283,7 +287,25 @@ const Index = () => {
                 </div>
               )}
 
-
+              {/* Modal para Juani TSEC */}
+              {winner?.name.toLowerCase() === "lauti" && !isSpinning && showJuaniModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                    <img
+                      src="/pp-turn-roulette/juani-tsec.png"   
+                      alt="draco"
+                      className="w-80 mx-auto mb-8"
+                    />
+                    <button
+                      onClick={() => setShowJuaniModal(false)}
+                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              )}
+                
                 {/* Buttons */}
                 <div className="flex flex-col items-center gap-3">
                   {!winner && (
