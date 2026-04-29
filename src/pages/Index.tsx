@@ -268,7 +268,7 @@ const Index = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                   <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                     <img
-                      src="/pp-turn-roulette/Gemini_Generated_Image_l52rgjl52rgjl52r.png.png"   
+                      src="/pp-turn-roulette/Gemini_Generated_Image_l52rgjl52rgjl52r.png"   
                       alt="draco"
                       className="w-80 mx-auto mb-8"
                     />
