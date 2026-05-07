@@ -66,6 +66,8 @@ const Index = () => {
   const [showMatiModal, setShowMatiModal] = useState(false);
   const [showLauModal, setShowLauModal] = useState(false);
   const [showJuaniModal, setShowJuaniModal] = useState(false);
+  const [showGusModal, setShowGusModal] = useState(false);
+  const [showMauModal, setShowMauModal] = useState(false);
 
   const playTick = useTickSound();
   const animFrameRef = useRef<number>(0);
@@ -166,6 +168,12 @@ const Index = () => {
   }
   if (winner?.name.toLowerCase() === "juani" && !isSpinning) {
     setShowJuaniModal(true);
+  }
+  if (winner?.name.toLowerCase() === "gus" && !isSpinning) {
+    setShowGusModal(true);
+  }
+  if (winner?.name.toLowerCase() === "mau" && !isSpinning) {
+    setShowMauModal(true);
   }
 }, [winner, isSpinning]);
   
@@ -292,12 +300,53 @@ const Index = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                   <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                     <img
-                      src="/pp-turn-roulette/tsec-juani.png"   
+                      src="/pp-turn-roulette/juani-hipon.png"   
                       alt="draco"
                       className="w-80 mx-auto mb-8"
                     />
+                    <h2 className="text-3xl font-bold mb-6 text-white">Fluye con la ola de la vida bro</h2>
                     <button
                       onClick={() => setShowJuaniModal(false)}
+                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Modal para gus ron */}
+              {winner?.name.toLowerCase() === "gus" && !isSpinning && showGusModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                    <img
+                      src="/pp-turn-roulette/gus.png"   
+                      alt="gus"
+                      className="w-80 mx-auto mb-8"
+                    />
+                    <h2 className="text-3xl font-bold mb-6 text-white">Salud chamos!!</h2>
+                    <button
+                      onClick={() => setShowGusModal(false)}
+                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Modal para mau ron */}
+              {winner?.name.toLowerCase() === "mau" && !isSpinning && showMauModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                    <img
+                      src="/pp-turn-roulette/mau.png"   
+                      alt="mau"
+                      className="w-80 mx-auto mb-8"
+                    />
+                    <h2 className="text-3xl font-bold mb-6 text-white">Farmeando aura!!</h2>
+                    <button
+                      onClick={() => setShowMauModal(false)}
                       className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
                     >
                       Cerrar
