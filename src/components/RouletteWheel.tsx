@@ -14,14 +14,8 @@ interface RouletteWheelProps {
 }
 
 const SEGMENT_COLORS = [
-  "hsl(220, 60%, 25%)",
-  "hsl(200, 70%, 22%)",
-  "hsl(240, 50%, 28%)",
-  "hsl(210, 65%, 20%)",
-  "hsl(230, 55%, 26%)",
-  "hsl(195, 60%, 24%)",
-  "hsl(250, 45%, 30%)",
-  "hsl(215, 70%, 22%)",
+  "#C1121F",
+  "#1A1A1A"
 ];
 
 const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: RouletteWheelProps) => {
