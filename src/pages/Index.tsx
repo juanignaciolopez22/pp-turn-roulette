@@ -60,7 +60,7 @@ const Index = () => {
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState<(typeof teamMembers)[0] | null>(null);
   const [allDone, setAllDone] = useState(false);
-  
+
   const [showAgusModal, setShowAgusModal] = useState(false);
   const [showJefaModal, setShowJefaModal] = useState(false);
   const [showMatiModal, setShowMatiModal] = useState(false);
@@ -156,35 +156,35 @@ const Index = () => {
   };
 
   useEffect(() => {
-  if (winner?.name.toLowerCase() === "agus" && !isSpinning) {
-    setShowAgusModal(true);
-  }
-  if (winner?.name.toLowerCase() === "jefa" && !isSpinning) {
-    setShowJefaModal(true);
-  }
-  if (winner?.name.toLowerCase() === "mati" && !isSpinning) {
-    setShowMatiModal(true);
-  }
-  if (winner?.name.toLowerCase() === "lauti" && !isSpinning) {
-    setShowLauModal(true);
-  }
-  if (winner?.name.toLowerCase() === "juani" && !isSpinning) {
-    setShowJuaniModal(true);
-  }
-  if (winner?.name.toLowerCase() === "gus" && !isSpinning) {
-    setShowGusModal(true);
-  }
-  if (winner?.name.toLowerCase() === "mau" && !isSpinning) {
-    setShowMauModal(true);
-  }
-  if (winner?.name.toLowerCase() === "alva" && !isSpinning) {
-    setShowAlvaModal(true);
-  }
-  if (winner?.name.toLowerCase() === "juanito" && !isSpinning) {
-    setShowJuanitoModal(true);
-  }
-}, [winner, isSpinning]);
-  
+    if (winner?.name.toLowerCase() === "agus" && !isSpinning) {
+      setShowAgusModal(true);
+    }
+    if (winner?.name.toLowerCase() === "jefa" && !isSpinning) {
+      setShowJefaModal(true);
+    }
+    if (winner?.name.toLowerCase() === "mati" && !isSpinning) {
+      setShowMatiModal(true);
+    }
+    if (winner?.name.toLowerCase() === "lauti" && !isSpinning) {
+      setShowLauModal(true);
+    }
+    if (winner?.name.toLowerCase() === "juani" && !isSpinning) {
+      setShowJuaniModal(true);
+    }
+    if (winner?.name.toLowerCase() === "gus" && !isSpinning) {
+      setShowGusModal(true);
+    }
+    if (winner?.name.toLowerCase() === "mau" && !isSpinning) {
+      setShowMauModal(true);
+    }
+    if (winner?.name.toLowerCase() === "alva" && !isSpinning) {
+      setShowAlvaModal(true);
+    }
+    if (winner?.name.toLowerCase() === "juanito" && !isSpinning) {
+      setShowJuanitoModal(true);
+    }
+  }, [winner, isSpinning]);
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <FinanceIcons />
@@ -222,7 +222,7 @@ const Index = () => {
                     <p className="text-2xl font-black text-primary neon-text">{winner.name}, te toca...</p>
                   </div>
                 )}
-                
+
                 {winner?.name.toLowerCase() === "agus" && !isSpinning && showAgusModal && (
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
@@ -242,167 +242,167 @@ const Index = () => {
                   </div>
                 )}
 
-                
-              {/* Modal para juanito */}
-              {winner?.name.toLowerCase() === "juanito" && !isSpinning && showJuanitoModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/juanito-galan.jpg"   // 👈 tu GIF en public
-                      alt="Juanito"
-                      className="w-120 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Le toca al parcero más galán!!</h2>
-                    <button
-                      onClick={() => setShowJuanitoModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
-                  </div>
-                </div>
-              )}
 
-              {/* Modal para Jefa */}
-              {winner?.name.toLowerCase() === "jefa" && !isSpinning && showJefaModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/malefica.png"   // 👈 tu GIF en public
-                      alt="Jefa"
-                      className="w-80 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">In G̶o̶d̶ Mili we trust</h2>
-                    <button
-                      onClick={() => setShowJefaModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
+                {/* Modal para juanito */}
+                {winner?.name.toLowerCase() === "juanito" && !isSpinning && showJuanitoModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/juanito-galan.jpg"   // 👈 tu GIF en public
+                        alt="Juanito"
+                        className="w-120 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Le toca al parcero más galán!!</h2>
+                      <button
+                        onClick={() => setShowJuanitoModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Modal para Mati padre */}
-              {winner?.name.toLowerCase() === "mati" && !isSpinning && showMatiModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/mati.png"   
-                      alt="Jefa"
-                      className="w-80 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Mateo Lucca Mamani alert</h2>
-                    <button
-                      onClick={() => setShowMatiModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
+                {/* Modal para Jefa */}
+                {winner?.name.toLowerCase() === "jefa" && !isSpinning && showJefaModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/malefica.png"   // 👈 tu GIF en public
+                        alt="Jefa"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">In G̶o̶d̶ Mili we trust</h2>
+                      <button
+                        onClick={() => setShowJefaModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+
+                {/* Modal para Mati padre */}
+                {winner?.name.toLowerCase() === "mati" && !isSpinning && showMatiModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/mati.png"
+                        alt="Jefa"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Mateo Lucca Mamani alert</h2>
+                      <button
+                        onClick={() => setShowMatiModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                )}
 
                 {/* Modal para Dragon */}
-              {winner?.name.toLowerCase() === "lauti" && !isSpinning && showLauModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/Gemini_Generated_Image_l52rgjl52rgjl52r.png"   
-                      alt="draco"
-                      className="w-80 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Todo al negro Dragon furioso!</h2>
-                    <button
-                      onClick={() => setShowLauModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
+                {winner?.name.toLowerCase() === "lauti" && !isSpinning && showLauModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/Gemini_Generated_Image_l52rgjl52rgjl52r.png"
+                        alt="draco"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Todo al negro Dragon furioso!</h2>
+                      <button
+                        onClick={() => setShowLauModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Modal para Juani TSEC */}
-              {winner?.name.toLowerCase() === "juani" && !isSpinning && showJuaniModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/juani-hipon.png"   
-                      alt="draco"
-                      className="w-80 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Fluye con la ola de la vida bro</h2>
-                    <button
-                      onClick={() => setShowJuaniModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
+                {/* Modal para Juani TSEC */}
+                {winner?.name.toLowerCase() === "juani" && !isSpinning && showJuaniModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/juani-hipon.png"
+                        alt="draco"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Fluye con la ola de la vida bro</h2>
+                      <button
+                        onClick={() => setShowJuaniModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Modal para Alva */}
-              {winner?.name.toLowerCase() === "alva" && !isSpinning && showAlvaModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/alva.png"   
-                      alt="alva"
-                      className="w-120 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Jugador de toda la cancha papaa!!</h2>
-                    <button
-                      onClick={() => setShowAlvaModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
+                {/* Modal para Alva */}
+                {winner?.name.toLowerCase() === "alva" && !isSpinning && showAlvaModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/alva.png"
+                        alt="alva"
+                        className="w-120 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Jugador de toda la cancha papaa!!</h2>
+                      <button
+                        onClick={() => setShowAlvaModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Modal para gus ron */}
-              {winner?.name.toLowerCase() === "gus" && !isSpinning && showGusModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/gus.png"   
-                      alt="gus"
-                      className="w-80 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Salud chamos!!</h2>
-                    <button
-                      onClick={() => setShowGusModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
+                {/* Modal para gus ron */}
+                {winner?.name.toLowerCase() === "gus" && !isSpinning && showGusModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/gus.png"
+                        alt="gus"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Salud chamos!!</h2>
+                      <button
+                        onClick={() => setShowGusModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Modal para mau ron */}
-              {winner?.name.toLowerCase() === "mau" && !isSpinning && showMauModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
-                    <img
-                      src="/pp-turn-roulette/mau.png"   
-                      alt="mau"
-                      className="w-80 mx-auto mb-8"
-                    />
-                    <h2 className="text-3xl font-bold mb-6 text-white">Farmeando aura!!</h2>
-                    <button
-                      onClick={() => setShowMauModal(false)}
-                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
-                    >
-                      Cerrar
-                    </button>
+                {/* Modal para mau ron */}
+                {winner?.name.toLowerCase() === "mau" && !isSpinning && showMauModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/mau.png"
+                        alt="mau"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Farmeando aura!!</h2>
+                      <button
+                        onClick={() => setShowMauModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
-                
+                )}
+
                 {/* Buttons */}
                 <div className="flex flex-col items-center gap-3">
                   {!winner && (
