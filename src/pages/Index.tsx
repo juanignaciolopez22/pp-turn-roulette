@@ -68,6 +68,7 @@ const Index = () => {
   const [showJuaniModal, setShowJuaniModal] = useState(false);
   const [showGusModal, setShowGusModal] = useState(false);
   const [showMauModal, setShowMauModal] = useState(false);
+  const [showAlvaModal, setShowAlvaModal] = useState(false);
 
   const playTick = useTickSound();
   const animFrameRef = useRef<number>(0);
@@ -174,6 +175,9 @@ const Index = () => {
   }
   if (winner?.name.toLowerCase() === "mau" && !isSpinning) {
     setShowMauModal(true);
+  }
+  if (winner?.name.toLowerCase() === "alva" && !isSpinning) {
+    setShowAlvaModal(true);
   }
 }, [winner, isSpinning]);
   
@@ -307,6 +311,26 @@ const Index = () => {
                     <h2 className="text-3xl font-bold mb-6 text-white">Fluye con la ola de la vida bro</h2>
                     <button
                       onClick={() => setShowJuaniModal(false)}
+                      className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Modal para Alva */}
+              {winner?.name.toLowerCase() === "alva" && !isSpinning && showAlvaModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                  <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                    <img
+                      src="/pp-turn-roulette/alva.png"   
+                      alt="draco"
+                      className="w-80 mx-auto mb-8"
+                    />
+                    <h2 className="text-3xl font-bold mb-6 text-white">Jugador de toda la cancha papaa!!</h2>
+                    <button
+                      onClick={() => setShowAlvaModal(false)}
                       className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
                     >
                       Cerrar
