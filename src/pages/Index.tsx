@@ -419,7 +419,7 @@ const Index = () => {
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">Leandro Puniello o Alvaro Martino?</h2>
                       <button
-                        onClick={() => setShowMauModal(false)}
+                        onClick={() => setShowLeanModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
                       >
                         Cerrar
