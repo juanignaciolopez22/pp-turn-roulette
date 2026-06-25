@@ -17,6 +17,7 @@ const teamMembers = [
   { name: "Agus", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjX-bnx2jo8lDmqaUJpBML6iV_9__YPr5J9Zex9VsRQCjp5Lg7qKYheSAmzyDxsp5oa-EKYBDNY2FCNP5GaWqPY4BnamAlbT-i7KlDHi9xYuGs4tNRSDj7MNpHt6ed-Zh76ZKnrQsbLji2sI-yHJfyUNcJ98goxiy0oShFWVwx3aD5KaRJ_79yVAGD8Ej54VXBKfH6y5Y9gjWwVcxKxsQRPjwNqONypNl8fOps62nFLEx6SMdUWyWy5ojvWGfTk0xvW7OmwhdZK52waE-dlcrb5HRvpRwy6PYKa5YobdkpVh1dDArsPhiJeyZuiTs3Aj5-9eqNfYBd7Z4MMPaPftoa-957akyhNAZ0Hy_aQnUXCc2qGX16BJiVDyzt8RFu33gtqn-lQmshWCbzh5WRtF2gMIXOkf9oKX-O2ccLxDU8n3Tm0u5BJjjGxb9F56f7iCOkMbJeXyjQZPJ8MmHA9K0Nf8N28kY7Mb5fR_wnn7bhIH4yA3QbNRxOZVgW5HE_g6cJ-4FLZdraRI0n6zQh3F4xKyFvixpB_Ooyfq4mh9k50Hd7hxjHNarLClTDiB0RMQakORwarYd67eyqqGbOrsBxpO37ICXwLHTWYWmYO_ZcvINacvq_nB1zcc5iKxpjHr2dsGXF9YUB8EO0l1FobW8yrBOTmtAM02ErdlEGAocBnjQ8VtjV1BSfPfk3simqEAT54KvEquRbj9nzLBRU0sLo0g9wYYja49APzLXwPFLYI-2H2DsZkmjHFD9Lw0VL7BJq5KocHsLG6BsrNTttWCfU4_o88-io5bWSr87wGxUsNNfm9GDBr7SBMctRaguJVfayn2Ckg8C4SN89lXD9GOy9upPEdbouK6NjQHkgS2N5HS2GOhMGwjKCWRUc7eyOsT9uMPmiY6GppEKfx2DxdDetuN8s_M5gW26b2o28hIuzmAxWGtRuhjfF6BlC-ZCljweO3vmF2auLkGcpvgw_4UeIVPNaPxuHf1Rf5S5gewgMYpALFeYgun9UGQAxvJN0huL1arwTi-KsX-PtskW-kF7PcAojBJ81HM5zlNJXHgVhTgvmIBzisb820x=s265-p-k-rw-no" },
   { name: "Juanito", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjWGnZ-b8hggEWSOe3atkeyOvRdXPWfkG5G8bJ-FSjlaO-PEXN4=s265-p-k-rw-no" },
   { name: "Nati", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjVzDOYro0Nm7A8-SoaM2nfUmG7Yo842m9L2tMxBZ2oD7T_lFS4=s265-p-k-rw-no" },
+  { name: "Lean", avatar: "https://lh3.googleusercontent.com/a/ACg8ocLm3ix39ay7YJBOtuhNSJ6MzfqsGNLIaAJiaxUpVADnDoRyvA=s71-p-k-rw-no-mo" },
   { name: "Gus", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjXzXrXuA-QD4EEDtiDkwSmRgOX_O9ZrTGcIZpIbtVHblykthiM=s265-p-k-rw-no" }
 ];
 
@@ -70,7 +71,7 @@ const Index = () => {
   const [showMauModal, setShowMauModal] = useState(false);
   const [showAlvaModal, setShowAlvaModal] = useState(false);
   const [showJuanitoModal, setShowJuanitoModal] = useState(false);
-
+  const [showLeanModal, setShowLeanModal] = useState(false);
   const playTick = useTickSound();
   const animFrameRef = useRef<number>(0);
   const currentRotRef = useRef(0);
@@ -182,6 +183,9 @@ const Index = () => {
     }
     if (winner?.name.toLowerCase() === "juanito" && !isSpinning) {
       setShowJuanitoModal(true);
+    }
+    if (winner?.name.toLowerCase() === "lean" && !isSpinning) {
+      setShowLeanModal(true);
     }
   }, [winner, isSpinning]);
 
@@ -393,6 +397,27 @@ const Index = () => {
                         className="w-80 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">Farmeando aura!!</h2>
+                      <button
+                        onClick={() => setShowMauModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+
+                {/* Modal para the new lean*/}
+                {winner?.name.toLowerCase() === "lean" && !isSpinning && showLeanModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/lean-alvarizado.jfif"
+                        alt="mau"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Leandro Puniello o Alvaro Martino?</h2>
                       <button
                         onClick={() => setShowMauModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
