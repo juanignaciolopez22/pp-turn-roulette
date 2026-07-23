@@ -314,7 +314,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/el-conejo.jfif"
                         alt="draco"
-                        className="w-80 mx-auto mb-8"
+                        className="w-120 mx-auto mb-8" 
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">El conejo malo lo hizo de nuevo!</h2>
                       <button
