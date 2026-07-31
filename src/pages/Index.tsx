@@ -72,6 +72,8 @@ const Index = () => {
   const [showAlvaModal, setShowAlvaModal] = useState(false);
   const [showJuanitoModal, setShowJuanitoModal] = useState(false);
   const [showLeanModal, setShowLeanModal] = useState(false);
+  const [showNatiModal, setShowNatiModal] = useState(false);
+
   const playTick = useTickSound();
   const animFrameRef = useRef<number>(0);
   const currentRotRef = useRef(0);
@@ -186,6 +188,9 @@ const Index = () => {
     }
     if (winner?.name.toLowerCase() === "lean" && !isSpinning) {
       setShowLeanModal(true);
+    }
+    if (winner?.name.toLowerCase() === "nati" && !isSpinning) {
+      setShowNatiModal(true);
     }
   }, [winner, isSpinning]);
 
@@ -396,7 +401,7 @@ const Index = () => {
                         alt="mau"
                         className="w-80 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">0800 Sanguinetti mecánica del autoMOTOR</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">0800 Sanguinetti tu mecánico de confianza.</h2>
                       <button
                         onClick={() => setShowMauModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -413,13 +418,33 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/lean-alvarizado.jfif"
+                        src="/pp-turn-roulette/lean-fernet.jfif"
                         alt="mau"
                         className="w-80 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Leandro Puniello o Alvaro Martino?</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white"></h2>
                       <button
                         onClick={() => setShowLeanModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                  {/* Modal para the Nati*/}
+                {winner?.name.toLowerCase() === "nati" && !isSpinning && showNatiModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/nati.png"
+                        alt="mau"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">Alfonsina alert <3</h2>
+                      <button
+                        onClick={() => setShowNatiModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
                       >
                         Cerrar
