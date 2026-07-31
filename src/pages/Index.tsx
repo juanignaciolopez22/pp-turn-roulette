@@ -359,7 +359,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/alvaros.jfif"
                         alt="alva"
-                        className="w-120 mx-auto mb-8"
+                        className="w-80 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">APD Alvarillos por doquier</h2>
                       <button
@@ -420,7 +420,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/lean-fernet.jfif"
                         alt="mau"
-                        className="w-80 mx-auto mb-8"
+                        className="w-120 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white"></h2>
                       <button
