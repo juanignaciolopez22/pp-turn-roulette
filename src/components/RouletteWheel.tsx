@@ -18,6 +18,10 @@ const SEGMENT_COLORS = [
   "#1A1A1A"
 ];
 
+const RABBIT_COLORS = [
+  "#1A1A1A"
+];
+
 const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: RouletteWheelProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const size = 420;
@@ -52,6 +56,9 @@ const RouletteWheel = ({ members, rotation, isSpinning, juanitoCenterImage }: Ro
       ctx.arc(center, center, radius, startAngle, endAngle);
       ctx.closePath();
       ctx.fillStyle = SEGMENT_COLORS[i % SEGMENT_COLORS.length];
+      if(isSpinning && members.find(m => m.name === "Lauti")) {
+        ctx.fillStyle = RABBIT_COLORS[i % SEGMENT_COLORS.length];
+      }
       ctx.fill();
 
       // Borde
