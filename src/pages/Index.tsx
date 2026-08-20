@@ -228,7 +228,7 @@ const Index = () => {
                 {/* Winner banner */}
                 {winner && !isSpinning && (
                   <div className="glass-card rounded-xl px-8 py-5 text-center animate-scale-in neon-border">
-                    <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">¡Bingo!</p>
+                    <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">¡TREMENDO PLENO!</p>
                     <p className="text-2xl font-black text-primary neon-text">{winner.name}, te toca...</p>
                   </div>
                 )}
@@ -358,11 +358,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/alvaros.jfif"
+                        src="/pp-turn-roulette/alva-italia.jpg"
                         alt="alva"
-                        className="w-80 mx-auto mb-8"
+                        className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">APD Alvarillos por doquier</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Benvenuto Alva!!</h2>
                       <button
                         onClick={() => setShowAlvaModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -505,7 +505,7 @@ const Index = () => {
             <div className="w-full lg:w-72 glass-card rounded-xl p-5 animate-fade-in">
               <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4 flex items-center gap-2">
                 <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse-neon" />
-                Ya hablaron lo suficiente:
+                Ya la boquearon una banda:
               </h3>
               <div className="space-y-2">
                 {done.map((member) => (
