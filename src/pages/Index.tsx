@@ -122,10 +122,9 @@ const Index = () => {
         // Pointer at top = 270° in canvas. The rotation goes clockwise.
         // The segment at the pointer: (360 - finalAngle + 270) mod 360
         const pointerAngle = ((360 - finalAngle + 270) % 360 + 360) % 360;
-        const rabbit = remaining.find(n => n.name === "Lauti");
         const winnerIndex = Math.floor(pointerAngle / segAngle) % remaining.length;
 
-        setWinner(rabbit ?? remaining[winnerIndex]);
+        setWinner(remaining[winnerIndex]);
         setIsSpinning(false);
         fireConfetti();
       }
