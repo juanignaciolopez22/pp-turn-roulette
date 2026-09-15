@@ -257,11 +257,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/juanito-galan.jpg"   // 👈 tu GIF en public
+                        src="/pp-turn-roulette/juanito-cumple.jfif"   // 👈 tu GIF en public
                         alt="Juanito"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Le toca al parcero más galán!!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Feliz cumpleaños parcero! Te queremos mucho!</h2>
                       <button
                         onClick={() => setShowJuanitoModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
