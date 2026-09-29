@@ -318,7 +318,7 @@ const Index = () => {
                 )}
 
                 {/* Modal para new Herni*/}
-                {winner?.name.toLowerCase() === "henri" && !isSpinning && showHerniModal && (
+                {winner?.name.toLowerCase() === "herni" && !isSpinning && showHerniModal && (
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
