@@ -18,6 +18,7 @@ const teamMembers = [
   { name: "Juanito", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjWGnZ-b8hggEWSOe3atkeyOvRdXPWfkG5G8bJ-FSjlaO-PEXN4=s265-p-k-rw-no" },
   { name: "Nati", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjVzDOYro0Nm7A8-SoaM2nfUmG7Yo842m9L2tMxBZ2oD7T_lFS4=s265-p-k-rw-no" },
   { name: "Lean", avatar: "https://lh3.googleusercontent.com/a/ACg8ocLm3ix39ay7YJBOtuhNSJ6MzfqsGNLIaAJiaxUpVADnDoRyvA=s71-p-k-rw-no-mo" },
+  { name: "Herni", avatar: "https://lh3.googleusercontent.com/cm/AGPWSu_C6b4qFeOhwGvfgxsIOcJj3b46UEmSTZ0gOCTlyNRMsHxEn_b9p5wI0ooIXG9Kp7Bvvw=s64-p-k-rw-no" },
   { name: "Gus", avatar: "https://lh3.googleusercontent.com/a-/ALV-UjXzXrXuA-QD4EEDtiDkwSmRgOX_O9ZrTGcIZpIbtVHblykthiM=s265-p-k-rw-no" }
 ];
 
@@ -73,7 +74,8 @@ const Index = () => {
   const [showJuanitoModal, setShowJuanitoModal] = useState(false);
   const [showLeanModal, setShowLeanModal] = useState(false);
   const [showNatiModal, setShowNatiModal] = useState(false);
-
+  const [showHerniModal, setShowHerniModal] = useState(false);
+  
   const playTick = useTickSound();
   const animFrameRef = useRef<number>(0);
   const currentRotRef = useRef(0);
@@ -192,6 +194,9 @@ const Index = () => {
     if (winner?.name.toLowerCase() === "nati" && !isSpinning) {
       setShowNatiModal(true);
     }
+    if (winner?.name.toLowerCase() === "herni" && !isSpinning) {
+      setShowHerniModal(true);
+    }
   }, [winner, isSpinning]);
 
   return (
@@ -236,11 +241,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/optimista.png"
+                        src="/pp-turn-roulette/agus-patineta.png"
                         alt="Optimista"
                         className="w-80 mx-auto mb-8" // 👈 más grande (20rem)
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Salud optimista del gol!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">El Tony Hawk del pueblo papá!!</h2>
                       <button
                         onClick={() => setShowAgusModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg neon-text"
@@ -257,11 +262,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/juanito-cumple.jfif"   // 👈 tu GIF en public
+                        src="/pp-turn-roulette/juanito-galan.jpg"   // 👈 tu GIF en public
                         alt="Juanito"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Feliz cumpleaños parcero! Te queremos mucho!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Le toca al parcero más galán!!</h2>
                       <button
                         onClick={() => setShowJuanitoModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -312,6 +317,26 @@ const Index = () => {
                   </div>
                 )}
 
+                {/* Modal para new Herni*/}
+                {winner?.name.toLowerCase() === "mati" && !isSpinning && showMatiModal && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                    <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
+                      <img
+                        src="/pp-turn-roulette/herni-incognita.png"
+                        alt="Jefa"
+                        className="w-80 mx-auto mb-8"
+                      />
+                      <h2 className="text-3xl font-bold mb-6 text-white">A promptear muchachos</h2>
+                      <button
+                        onClick={() => setShowMatiModal(false)}
+                        className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                )}
+
                 {/* Modal para Dragon */}
                 {winner?.name.toLowerCase() === "lauti" && !isSpinning && showLauModal && (
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
@@ -337,11 +362,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/juani-hipon.png"
+                        src="/pp-turn-roulette/draco-malfoy.png"
                         alt="draco"
                         className="w-80 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Fluye con la ola de la vida bro</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Wtf Draco Malfoy</h2>
                       <button
                         onClick={() => setShowJuaniModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
