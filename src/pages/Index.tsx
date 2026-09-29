@@ -243,7 +243,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/agus-patineta.png"
                         alt="Optimista"
-                        className="w-80 mx-auto mb-8" // 👈 más grande (20rem)
+                        className="w-120 mx-auto mb-8" // 👈 más grande (20rem)
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">El Tony Hawk del pueblo papá!!</h2>
                       <button
@@ -364,7 +364,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/draco-malfoy.png"
                         alt="draco"
-                        className="w-80 mx-auto mb-8"
+                        className="w-120 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">Wtf Draco Malfoy</h2>
                       <button
@@ -382,11 +382,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/alva-italia.jpg"
+                        src="/pp-turn-roulette/alva-italia2.png"
                         alt="alva"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Benvenuto Alva!!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Benvenuto Alva 2.0!!</h2>
                       <button
                         onClick={() => setShowAlvaModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
