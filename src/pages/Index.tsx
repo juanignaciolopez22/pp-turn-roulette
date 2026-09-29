@@ -324,7 +324,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/herni-incognita.jpg"
                         alt="Jefa"
-                        className="w-80 mx-auto mb-8"
+                        className="w-120 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">A promptear muchachos</h2>
                       <button
