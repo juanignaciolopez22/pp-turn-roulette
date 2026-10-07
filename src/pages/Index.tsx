@@ -262,11 +262,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/juanito-galan.jpg"   // 👈 tu GIF en public
+                        src="/pp-turn-roulette/juanito-heroe.jpg"   // 👈 tu GIF en public
                         alt="Juanito"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Le toca al parcero más galán!!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Na na na batman!!</h2>
                       <button
                         onClick={() => setShowJuanitoModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -302,9 +302,9 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/mati.png"
+                        src="/pp-turn-roulette/mariscal-casa.jpg"
                         alt="Jefa"
-                        className="w-80 mx-auto mb-8"
+                        className="w-100 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">Mateo Lucca Mamani alert</h2>
                       <button
@@ -362,11 +362,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/draco-malfoy.png"
+                        src="/pp-turn-roulette/draco-vacaciones.png"
                         alt="draco"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Wtf Draco Malfoy</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Juan se encuentra de vacaciones eclesiásticas</h2>
                       <button
                         onClick={() => setShowJuaniModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -443,11 +443,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/lean-fernet.jfif"
+                        src="/pp-turn-roulette/lean-fernet.jpg"
                         alt="mau"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white"></h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Si hay fernet... es Branca</h2>
                       <button
                         onClick={() => setShowLeanModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
