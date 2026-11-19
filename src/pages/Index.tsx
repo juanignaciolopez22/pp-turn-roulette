@@ -241,7 +241,7 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/agus-patineta.png"
+                        src="/pp-turn-roulette/agus-rampa.png"
                         alt="Optimista"
                         className="w-120 mx-auto mb-8" // 👈 más grande (20rem)
                       />
@@ -282,11 +282,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/malefica.png"   // 👈 tu GIF en public
+                        src="/pp-turn-roulette/malefica-teg.png"   
                         alt="Jefa"
                         className="w-80 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">In G̶o̶d̶ Mili we trust</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">In G̶o̶d̶ Mili we trust.</h2>
                       <button
                         onClick={() => setShowJefaModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -322,11 +322,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/herni-incognita.jpg"
+                        src="/pp-turn-roulette/PS10.jpg"
                         alt="Jefa"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">A promptear muchachos</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">tira la PS2, no llega al piso</h2>
                       <button
                         onClick={() => setShowHerniModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -342,11 +342,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/el-conejo.jfif"
+                        src="/pp-turn-roulette/pastor.png"
                         alt="draco"
                         className="w-120 mx-auto mb-8" 
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">El conejo malo lo hizo de nuevo!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">DAME LUZ, OH PASTOR</h2>
                       <button
                         onClick={() => setShowLauModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -362,11 +362,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/draco-vacaciones.png"
+                        src="/pp-turn-roulette/draco-beach.png"
                         alt="draco"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Juan se encuentra de vacaciones eclesiásticas</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Que raro esta Slytherin</h2>
                       <button
                         onClick={() => setShowJuaniModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -382,11 +382,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/alva-italia2.png"
+                        src="/pp-turn-roulette/alva-cesped.png"
                         alt="alva"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Benvenuto Alva 2.0!!</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Ya volvimos a estar FITs!</h2>
                       <button
                         onClick={() => setShowAlvaModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -422,11 +422,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/mecanico-mau.jfif"
+                        src="/pp-turn-roulette/meca-toro.png"
                         alt="mau"
                         className="w-80 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">0800 Sanguinetti tu mecánico de confianza.</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">"El MECA, mucho gusto."</h2>
                       <button
                         onClick={() => setShowMauModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
@@ -443,11 +443,11 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/lean-fernet.jpg"
+                        src="/pp-turn-roulette/fernets.png"
                         alt="mau"
                         className="w-120 mx-auto mb-8"
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">Si hay fernet... es Branca</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">Lo que el Branca se llevo</h2>
                       <button
                         onClick={() => setShowLeanModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
