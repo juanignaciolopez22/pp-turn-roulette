@@ -322,7 +322,7 @@ const Index = () => {
                   <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="bg-gray-900 p-10 rounded-lg text-center shadow-2xl max-w-2xl w-full border border-gray-700">
                       <img
-                        src="/pp-turn-roulette/PS10.jpg"
+                        src="/pp-turn-roulette/PS10.png"
                         alt="Jefa"
                         className="w-120 mx-auto mb-8"
                       />
@@ -364,7 +364,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/draco-beach.png"
                         alt="draco"
-                        className="w-120 mx-auto mb-8"
+                        className="w-80 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">Que raro esta Slytherin</h2>
                       <button
@@ -445,7 +445,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/fernets.png"
                         alt="mau"
-                        className="w-120 mx-auto mb-8"
+                        className="w-80 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">Lo que el Branca se llevo</h2>
                       <button
