@@ -284,7 +284,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/malefica-teg.png"   
                         alt="Jefa"
-                        className="w-80 mx-auto mb-8"
+                        className="w-120 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">In G̶o̶d̶ Mili we trust.</h2>
                       <button
@@ -324,7 +324,7 @@ const Index = () => {
                       <img
                         src="/pp-turn-roulette/PS10.png"
                         alt="Jefa"
-                        className="w-120 mx-auto mb-8"
+                        className="w-80 mx-auto mb-8"
                       />
                       <h2 className="text-3xl font-bold mb-6 text-white">tira la PS2, no llega al piso</h2>
                       <button
@@ -346,7 +346,7 @@ const Index = () => {
                         alt="draco"
                         className="w-120 mx-auto mb-8" 
                       />
-                      <h2 className="text-3xl font-bold mb-6 text-white">DAME LUZ, OH PASTOR</h2>
+                      <h2 className="text-3xl font-bold mb-6 text-white">DAME LUZ, OH PASTOR.</h2>
                       <button
                         onClick={() => setShowLauModal(false)}
                         className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition text-lg"
